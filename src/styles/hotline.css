@@ -1,0 +1,466 @@
+/* Hotline & Emergency Support Page Styles */
+.hotline-page {
+  padding-bottom: 4rem;
+}
+
+.hotline-hero {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-lg);
+  padding: 2.5rem 2rem;
+  margin: 1.5rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hotline-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--coral);
+}
+
+.hotline-hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hotline-hero-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hotline-hero h1 {
+  font: 800 2.2rem/1.2 var(--font-display);
+  color: var(--ink);
+  margin: 0.5rem 0 0.8rem;
+}
+
+.hotline-hero .lead {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 68ch;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hotline-mascot-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--sky);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-tile);
+  padding: 0.85rem 1.25rem;
+}
+
+.hotline-mascot-speech {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
+/* Hotline Section */
+.hotline-section {
+  margin-top: 3rem;
+}
+
+.section-head {
+  margin-bottom: 1.5rem;
+}
+
+.section-head h2 {
+  font: 800 1.6rem/1.25 var(--font-display);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.4rem;
+}
+
+.section-head .desc {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* School Hotline Cards */
+.school-hotline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.teacher-card {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  position: relative;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.teacher-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.teacher-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.teacher-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border: 2.5px solid var(--ink);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.teacher-avatar.female {
+  background: #ffd6e0;
+}
+
+.teacher-avatar.male {
+  background: #cbf3f0;
+}
+
+.teacher-info h3 {
+  font: 800 1.45rem/1.2 var(--font-display);
+  margin: 0 0 0.3rem;
+}
+
+.teacher-role {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  background: var(--mint);
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--ink);
+  margin-bottom: 0.5rem;
+}
+
+.teacher-note {
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.phone-display-box {
+  background: #f8fafc;
+  border: 2px dashed var(--ink);
+  border-radius: var(--r-tile);
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.phone-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--ink-soft);
+}
+
+.phone-number-big {
+  font: 800 1.85rem/1 var(--font-display);
+  color: #b91c1c;
+  letter-spacing: 0.5px;
+}
+
+.teacher-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.teacher-card-actions .btn {
+  flex: 1;
+  min-width: 130px;
+}
+
+/* Call Guarantee Box */
+.safety-guarantee-box {
+  margin-top: 1.5rem;
+  background: #ecfdf5;
+  border: 2px solid var(--green-deep);
+  border-radius: var(--r-tile);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 3px 3px 0 var(--green-deep);
+}
+
+.guarantee-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.guarantee-text h4 {
+  font: 800 1.15rem/1.3 var(--font-display);
+  color: var(--green-deep);
+  margin: 0 0 0.25rem;
+}
+
+.guarantee-text p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #064e3b;
+  line-height: 1.5;
+}
+
+/* National Hotlines */
+.national-hotline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.national-card {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-tile);
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.national-card-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.national-num-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  border: 2px solid var(--ink);
+  display: grid;
+  place-items: center;
+  font: 800 1.6rem/1 var(--font-display);
+  color: #fff;
+  background: var(--coral);
+  box-shadow: 2px 2px 0 var(--ink);
+  flex-shrink: 0;
+}
+
+.national-num-badge.blue {
+  background: #2563eb;
+}
+
+.national-info h4 {
+  font: 800 1.15rem/1.2 var(--font-display);
+  margin: 0 0 0.2rem;
+}
+
+.national-info p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Hotline Pages / External Links Grid */
+.hotline-pages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.25rem;
+}
+
+.page-link-card {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-tile);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.1rem;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  position: relative;
+}
+
+.page-link-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.page-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.page-badge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page-badge {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--ink);
+  background: var(--sky);
+}
+
+.page-icon {
+  font-size: 1.6rem;
+}
+
+.page-link-card h3 {
+  font: 800 1.2rem/1.3 var(--font-display);
+  margin: 0;
+  color: var(--ink);
+}
+
+.page-link-card p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.page-link-card .btn {
+  width: 100%;
+}
+
+/* Guidance Section */
+.guidance-box {
+  background: #fdf4ff;
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.guidance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.guidance-card {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-tile);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.guidance-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font: 800 1.15rem/1.2 var(--font-display);
+  color: #86198f;
+}
+
+.guidance-card p {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Anonymous Feedback Box */
+.feedback-box {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.feedback-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 680px;
+  margin-top: 1.25rem;
+}
+
+/* Home Section Hotline Highlight */
+.home-hotline-highlight {
+  margin-top: 3rem;
+  background: #fff7ed;
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-lg);
+  padding: 2rem;
+}
+
+.highlight-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.highlight-header h2 {
+  font: 800 1.6rem/1.2 var(--font-display);
+  margin: 0;
+  color: #9a3412;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Header Hotline Button */
+.site-nav a.nav-hotline {
+  background: var(--coral);
+  color: #fff;
+  border-color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.site-nav a.nav-hotline:hover {
+  background: #ff5252;
+  color: #fff;
+}
+
+.site-nav a.nav-hotline[aria-current='page'] {
+  background: var(--sun);
+  color: var(--ink);
+}

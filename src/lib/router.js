@@ -29,6 +29,8 @@ export const routes = {
     return `#/choi/${setId}${qs ? `?${qs}` : ''}`;
   },
   teacher: '#/giao-vien',
+  hotline: '#/duong-day-nong',
+  news: '#/tin-tuc-cong-thong-tin',
 };
 
 // Ghi nhớ trang trước trong phạm vi web, không dựa vào history.back()

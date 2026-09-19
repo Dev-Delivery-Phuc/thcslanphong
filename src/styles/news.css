@@ -1,0 +1,216 @@
+/* News & Government Portals Page */
+.news-page {
+  padding-bottom: 4rem;
+}
+
+.news-hero {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-lg);
+  padding: 2.5rem 2rem;
+  margin: 1.5rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background: #2563eb;
+}
+
+.news-hero-content h1 {
+  font: 800 2.2rem/1.2 var(--font-display);
+  color: var(--ink);
+  margin: 0.5rem 0 0.8rem;
+}
+
+.news-hero-content .lead {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 70ch;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.news-section {
+  margin-top: 3rem;
+}
+
+/* Portals Showcase Grid */
+.portals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.portal-card {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-tile);
+  box-shadow: var(--shadow);
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.portal-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.portal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.portal-icon {
+  font-size: 1.6rem;
+}
+
+.portal-card h3 {
+  font: 800 1.25rem/1.25 var(--font-display);
+  margin: 0.4rem 0 0.2rem;
+  color: var(--ink);
+}
+
+.portal-agency {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  background: var(--mint);
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--ink);
+  margin-bottom: 0.4rem;
+}
+
+.portal-desc {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Category Filter Tabs */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  padding: 0.45rem 1rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  color: var(--ink);
+  font: 700 0.92rem var(--font-display);
+  cursor: pointer;
+  transition: transform 0.08s ease, background 0.08s ease;
+}
+
+.tab-btn:hover {
+  background: var(--sky);
+}
+
+.tab-btn.active {
+  background: var(--sun);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* Articles List */
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.article-card {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.article-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: var(--shadow-lg);
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.article-title {
+  font: 800 1.45rem/1.3 var(--font-display);
+  margin: 0;
+  color: var(--ink);
+}
+
+.article-summary {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.article-highlights {
+  background: #f8fafc;
+  border-left: 4px solid var(--sun);
+  border-radius: 8px;
+  padding: 0.85rem 1.1rem;
+  margin: 0;
+}
+
+.article-highlights h5 {
+  font: 800 0.9rem/1 var(--font-display);
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+
+.article-highlights ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: #334155;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.article-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}

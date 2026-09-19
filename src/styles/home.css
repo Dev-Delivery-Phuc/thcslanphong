@@ -100,3 +100,133 @@
 .chapter-list a:hover {
   background: var(--sun);
 }
+
+/* ---------- Quick Dock Toolbar: Gọn gàng, tinh tế, không card lẻ ---------- */
+.quick-dock {
+  background: var(--paper);
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow);
+  padding: 1rem 1.25rem;
+  margin: 0 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick-dock-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+}
+
+.quick-dock-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font: 800 0.88rem/1.2 var(--font-display);
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  min-width: 215px;
+}
+
+.dot-live {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.25);
+  display: inline-block;
+  animation: pulse-dot 1.8s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.15); }
+}
+
+.quick-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.08s ease;
+  white-space: nowrap;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.chip-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.chip-teacher {
+  background: #fff7ed;
+  border-color: #f97316;
+  color: #9a3412;
+}
+
+.chip-teacher:hover {
+  background: #ffedd5;
+}
+
+.chip-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.chip-alert {
+  background: #fef2f2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.chip-alert:hover {
+  background: #fee2e2;
+}
+
+.chip-link {
+  background: #f0fdf4;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.chip-link:hover {
+  background: #dcfce7;
+}
+
+.chip-more {
+  background: var(--sky);
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.chip-more:hover {
+  background: var(--sun);
+}
+
+.quick-dock-divider {
+  height: 1px;
+  background: #e2e8f0;
+}

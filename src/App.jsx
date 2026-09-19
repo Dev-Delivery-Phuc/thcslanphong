@@ -8,6 +8,8 @@ import LessonPage from '@/features/lesson/LessonPage.jsx';
 import PlayPage from '@/features/quiz/PlayPage.jsx';
 import SharedPlayPage from '@/features/quiz/SharedPlayPage.jsx';
 import TeacherPage from '@/features/teacher/TeacherPage.jsx';
+import HotlinePage from '@/pages/HotlinePage.jsx';
+import NewsPage from '@/pages/NewsPage.jsx';
 
 function PlayRoute({ setId, mode, count }) {
   const saved = useSavedSets();
@@ -39,6 +41,13 @@ export default function App() {
       return <SharedPlayPage key={arg} code={arg} />;
     case 'giao-vien':
       return <TeacherPage />;
+    case 'duong-day-nong':
+    case 'hotline':
+      return <HotlinePage />;
+    case 'tin-tuc-cong-thong-tin':
+    case 'tin-tuc':
+    case 'bao-chi':
+      return <NewsPage />;
     default:
       return <NotFoundPage />;
   }
