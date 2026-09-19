@@ -49,6 +49,31 @@ export default function NewsPage() {
           </div>
         </section>
 
+        {/* Banner Tiêu Điểm Thực Tiễn Tại Trường */}
+        <section className="news-school-highlight">
+          <div className="school-highlight-card">
+            <div className="highlight-img-box">
+              <img
+                src="images/hoi-nghi-chuyen-de.jpg"
+                alt="Hội nghị chuyên đề phòng chống ma túy học đường tại THCS Lân Phong"
+                className="highlight-img"
+              />
+              <span className="highlight-tag">THỰC TIỄN NHÀ TRƯỜNG</span>
+            </div>
+            <div className="highlight-info-box">
+              <span className="badge badge-soft">Chuyên đề học đường 2026</span>
+              <h2>Hội Nghị Chuyên Đề: Xây Dựng Trường Học Không Ma Túy Tại {SITE.school}</h2>
+              <p>
+                Nhà trường chủ động phối hợp cùng lực lượng chức năng, ban đại diện cha mẹ học sinh và các thầy cô giáo tổ chức các buổi hội nghị, tọa đàm phổ biến pháp luật và trang bị bộ kỹ năng xử lý tình huống cho học sinh.
+              </p>
+              <div className="highlight-meta">
+                <span>📍 Địa điểm: Trường THCS Lân Phong</span>
+                <span>🛡️ Mục tiêu: Trường học an toàn - Học sinh khỏe mạnh</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Section 1: Cổng Thông Tin Tỉnh & Chính Phủ */}
         <section className="news-section" id="cong-thong-tin">
           <div className="section-head">

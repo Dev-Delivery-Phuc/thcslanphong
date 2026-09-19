@@ -14,6 +14,7 @@ export default function SiteHeader({ current }) {
   return (
     <header className="site-header">
       <a className="brand" href={routes.home}>
+        <img src="images/logo-thcs-lan-phong.jpg" alt="Logo Trường THCS Lân Phong" className="brand-logo-img" />
         <Mascot size={36} />
         <span className="brand-text">
           <span className="brand-school">{SITE.schoolShort}</span>

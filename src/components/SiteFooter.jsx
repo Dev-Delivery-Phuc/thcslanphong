@@ -10,6 +10,7 @@ export default function SiteFooter() {
       <div className="site-footer-inner">
         <div className="footer-main-row">
           <div className="footer-brand">
+            <img src="images/logo-thcs-lan-phong.jpg" alt="Logo Trường THCS Lân Phong" className="footer-logo-img" />
             <Mascot size={46} mood="happy" />
             <div className="footer-brand-text">
               <h3>{SITE.school}</h3>

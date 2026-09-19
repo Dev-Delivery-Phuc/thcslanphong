@@ -54,6 +54,24 @@ export default function HotlinePage() {
             </p>
           </div>
 
+          {/* Banner Hình ảnh Tập thể Giáo viên đồng hành */}
+          <div className="hotline-teachers-banner">
+            <div className="banner-photo-wrap">
+              <img
+                src="images/tap-the-giao-vien.jpg"
+                alt="Đội ngũ cán bộ giáo viên Trường THCS Lân Phong"
+                className="banner-photo-img"
+              />
+              <span className="banner-photo-tag">❤️ Đồng hành cùng học sinh</span>
+            </div>
+            <div className="banner-photo-caption">
+              <h3>Thầy Cô THCS Lân Phong luôn ở bên, lắng nghe và bảo vệ các em</h3>
+              <p>
+                Dù gặp phải bất kỳ khó khăn tâm lý, lời đe dọa hay sự rủ rê lôi kéo nào từ kẻ xấu, các em đừng ngần ngại gọi điện hoặc nhắn tin cho thầy cô. Nhà trường cam kết bảo mật danh tính tuyệt đối.
+              </p>
+            </div>
+          </div>
+
           <div className="school-hotline-grid">
             {SCHOOL_HOTLINES.map((item, idx) => (
               <div key={item.rawPhone} className="teacher-card">

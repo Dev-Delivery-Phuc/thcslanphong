@@ -15,11 +15,17 @@ export default function HomePage() {
       <main className="page home">
         <section className="hero">
           <div className="hero-copy">
-            <p className="hero-school">
-              Cổng thông tin của {SITE.school}
-              <br />
-              {SITE.location}
-            </p>
+            <div className="hero-badge">
+              <img
+                src="images/logo-thcs-lan-phong.jpg"
+                alt="Logo Trường THCS Lân Phong"
+                className="hero-badge-logo"
+              />
+              <div className="hero-badge-text">
+                <span className="hero-badge-school">{SITE.school}</span>
+                <span className="hero-badge-loc">{SITE.location}</span>
+              </div>
+            </div>
             <h1 className="display-xl">
               <span className="line">Phòng, chống</span> <span className="line">ma túy học đường</span>
             </h1>
@@ -127,6 +133,68 @@ export default function HomePage() {
           <h2 className="display-sm">Trò chơi củng cố</h2>
           <p className="muted">Chọn một bộ, sau đó chọn số câu muốn chơi.</p>
           <SetGrid sets={BUILTIN_SETS} />
+        </section>
+
+        {/* Góc Hình Ảnh Hoạt Động Nhà Trường */}
+        <section className="home-section school-gallery-section" aria-label="Hình ảnh hoạt động nhà trường">
+          <div className="section-head">
+            <h2 className="display-sm">📸 Góc hình ảnh hoạt động nhà trường</h2>
+            <p className="muted">
+              Học sinh {SITE.school} năng động, tích cực học tập và tham gia phong trào phòng, chống tệ nạn học đường.
+            </p>
+          </div>
+          <div className="school-gallery-grid">
+            <article className="school-gallery-card">
+              <div className="gallery-img-box">
+                <img
+                  src="images/hoc-sinh-lan-phong.jpg"
+                  alt="Học sinh Trường THCS Lân Phong ngày khai giảng"
+                  loading="lazy"
+                />
+                <span className="gallery-badge badge-student">Học sinh Lân Phong</span>
+              </div>
+              <div className="gallery-card-body">
+                <h3>Học sinh Lân Phong: Tự tin - Năng động - Sống đẹp</h3>
+                <p>
+                  Mỗi học sinh là một tuyên truyền viên tích cực, trang bị kỹ năng sống vững vàng và bản lĩnh từ chối mọi cám dỗ tệ nạn xã hội.
+                </p>
+              </div>
+            </article>
+
+            <article className="school-gallery-card">
+              <div className="gallery-img-box">
+                <img
+                  src="images/hoi-dong-su-pham.jpg"
+                  alt="Tập thể Hội đồng sư phạm Trường THCS Lân Phong"
+                  loading="lazy"
+                />
+                <span className="gallery-badge badge-teachers">Hội đồng sư phạm</span>
+              </div>
+              <div className="gallery-card-body">
+                <h3>Đội ngũ Thầy Cô: Tận tâm, đồng hành và bảo vệ</h3>
+                <p>
+                  Tập thể cán bộ giáo viên tâm huyết, luôn sẵn sàng lắng nghe, tư vấn tâm lý và chở che học sinh trước các nguy cơ học đường.
+                </p>
+              </div>
+            </article>
+
+            <article className="school-gallery-card">
+              <div className="gallery-img-box">
+                <img
+                  src="images/tap-huan-chuyen-de.jpg"
+                  alt="Sinh hoạt chuyên đề và tập huấn phòng chống ma túy tại THCS Lân Phong"
+                  loading="lazy"
+                />
+                <span className="gallery-badge badge-event">Chuyên đề & Kỹ năng</span>
+              </div>
+              <div className="gallery-card-body">
+                <h3>Tập huấn chuyên đề & Giáo dục kỹ năng phòng ngừa</h3>
+                <p>
+                  Nhà trường định kỳ tổ chức sinh hoạt chuyên đề, cung cấp kiến thức pháp luật và kỹ năng nhận diện, từ chối ma túy mới.
+                </p>
+              </div>
+            </article>
+          </div>
         </section>
 
         <HelpStrip />
