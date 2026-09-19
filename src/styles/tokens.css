@@ -1,0 +1,37 @@
+/* Phong cách "sticker vở học trò": nét mực navy dày, bóng đổ đặc lệch, bấm vào thì lún xuống. */
+:root {
+  color-scheme: light;
+
+  /* Màu */
+  --sky: #eaf6ff; /* nền trang */
+  --paper: #ffffff;
+  --ink: #1b2a4a; /* chữ + viền */
+  --ink-soft: #4a5a7a;
+  --green: #1fae6b; /* khiên, đáp án đúng */
+  --green-deep: #12824e;
+  --mint: #8fe3b8;
+  --sun: #ffc928; /* nút chính, điểm */
+  --coral: #ff6b6b; /* sai, cảnh báo */
+  --violet: #6d55f5; /* tính năng AI */
+  --violet-soft: #f1edff;
+  --opt-a: #ffd35c;
+  --opt-b: #7ccbff;
+  --opt-c: #c4b5ff;
+  --opt-d: #8fe3b8;
+
+  /* Hình khối */
+  --line: 2.5px solid var(--ink);
+  --shadow: 4px 4px 0 var(--ink);
+  --shadow-lg: 6px 6px 0 var(--ink);
+  --r-tile: 18px;
+  --r-panel: 28px;
+  --r-pill: 999px;
+
+  /* Chữ — cả hai font đều hỗ trợ đầy đủ tiếng Việt */
+  --font-display: 'Baloo 2', 'Be Vietnam Pro', system-ui, sans-serif;
+  --font-body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Bố cục */
+  --page-max: 1120px;
+  --gutter: 1.25rem;
+}

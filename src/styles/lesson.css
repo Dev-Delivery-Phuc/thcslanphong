@@ -1,0 +1,456 @@
+/* Bài giảng trình chiếu — chữ to, đọc được từ cuối lớp trên máy chiếu 1280×720. */
+.lesson {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+.lesson-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem var(--gutter);
+}
+.lesson-home {
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.lesson-chapter {
+  overflow: hidden;
+  color: var(--ink-soft);
+  font: 700 1rem/1.2 var(--font-display);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.lesson-stage {
+  display: grid;
+  place-items: center;
+  padding: 0.5rem var(--gutter) 1rem;
+}
+.slide {
+  width: 100%;
+  max-width: 1180px;
+  animation: slide-in 0.35s ease-out;
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+}
+.slide-title {
+  margin: 0 0 1.25rem;
+  font: 800 clamp(2rem, 4.6vw, 3.4rem)/1.08 var(--font-display);
+}
+.slide-lead {
+  max-width: 62ch;
+  margin: 0 0 1.5rem;
+  color: var(--ink-soft);
+  font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+}
+.lesson-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem var(--gutter) 1rem;
+}
+.lesson-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lesson-dots button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 2px solid var(--ink);
+  border-radius: var(--r-pill);
+  background: var(--paper);
+  cursor: pointer;
+  transition: width 0.2s ease;
+}
+.lesson-dots button.is-on {
+  width: 36px;
+  background: var(--ink);
+}
+
+/* ---------- Slide mở đầu: khoảnh khắc chuyển động chính ---------- */
+.opening {
+  display: grid;
+  justify-items: center;
+  gap: clamp(0.6rem, 1.8vh, 1.3rem);
+  text-align: center;
+}
+.opening-school {
+  display: grid;
+  gap: 0.1rem;
+  margin: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+  animation: fade 0.5s both;
+}
+.opening-school span:first-child {
+  color: var(--ink);
+  font: 800 clamp(1.2rem, 2.2vw, 1.6rem)/1.2 var(--font-display);
+}
+.opening-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+}
+.opening-line {
+  display: inline-block;
+  padding: 0.02em 0.45em 0.08em;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 6px 6px 0 var(--ink);
+  font: 800 clamp(2.2rem, min(7vw, 8.5vh), 5.4rem)/1.05 var(--font-display);
+  animation: stick 0.55s cubic-bezier(0.3, 1.5, 0.5, 1) both;
+  animation-delay: calc(var(--i) * 0.22s + 0.25s);
+}
+.opening-line:nth-child(1) {
+  rotate: -2deg;
+}
+.opening-line:nth-child(2) {
+  rotate: 1.5deg;
+}
+.opening-line:nth-child(3) {
+  rotate: -1deg;
+}
+.tone-paper {
+  background: var(--paper);
+}
+.tone-sun {
+  background: var(--sun);
+}
+.tone-mint {
+  background: var(--mint);
+}
+@keyframes stick {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(1.15);
+  }
+}
+.opening-mascot {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: pop 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+  animation-delay: 1.05s;
+}
+.speech {
+  max-width: 38ch;
+  margin: 0;
+  padding: 0.7rem 1rem;
+  border: var(--line);
+  border-radius: 18px 18px 18px 4px;
+  background: var(--paper);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 600;
+  text-align: left;
+}
+.opening-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: fade 0.5s both;
+  animation-delay: 1.4s;
+}
+
+/* ---------- Tình huống khởi động ---------- */
+.story-lines {
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+.story-line {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.3vw, 1.7rem);
+  font-weight: 500;
+  animation: rise 0.45s ease-out both;
+  animation-delay: calc(var(--i) * 0.7s + 0.2s);
+}
+.story-line:last-child {
+  font-weight: 700;
+}
+.story-ask {
+  animation: rise 0.45s ease-out both;
+  animation-delay: calc(var(--i) * 0.7s + 0.3s);
+}
+.story-question {
+  margin: 0 0 0.9rem;
+  font: 800 clamp(1.4rem, 2.6vw, 2rem)/1.2 var(--font-display);
+}
+.story-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+.story-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  min-height: 76px;
+  padding: 0.8rem 1rem;
+  border: var(--line);
+  border-radius: var(--r-tile);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  color: var(--ink);
+  font: 600 clamp(1.05rem, 1.8vw, 1.3rem)/1.3 var(--font-body);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    opacity 0.2s ease;
+}
+.story-choice:not(:disabled):hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-lg);
+}
+.story-choice:disabled {
+  cursor: default;
+}
+.story-choice-num {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: var(--line);
+  border-radius: 50%;
+  background: var(--sky);
+  font: 800 1.15rem/1 var(--font-display);
+}
+.story-choice.is-good {
+  background: var(--green);
+}
+.story-choice.is-bad {
+  background: var(--coral);
+}
+.story-choice.is-dim {
+  opacity: 0.45;
+}
+.story-reply {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border: var(--line);
+  border-radius: var(--r-panel);
+  box-shadow: var(--shadow-lg);
+  animation: rise 0.25s ease-out;
+}
+.story-reply.is-good {
+  background: #dff7ea;
+}
+.story-reply.is-bad {
+  background: #ffe7e5;
+}
+.story-reply p {
+  max-width: 70ch;
+  margin: 0;
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+}
+.story-reply .story-reply-title {
+  margin-bottom: 0.3rem;
+  font: 800 clamp(1.3rem, 2.2vw, 1.7rem)/1.2 var(--font-display);
+}
+
+/* ---------- Mục tiêu ---------- */
+.goal-list {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.goal-list li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: var(--line);
+  border-radius: var(--r-tile);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  font: 700 clamp(1.2rem, 2.4vw, 1.8rem)/1.3 var(--font-display);
+}
+.goal-icon {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+/* ---------- Khái niệm ---------- */
+.definition {
+  max-width: 60ch;
+  margin: 0 0 1rem;
+  padding: 1.25rem 1.5rem;
+  border: var(--line);
+  border-radius: var(--r-panel);
+  background: var(--paper);
+  box-shadow: var(--shadow-lg);
+  font: 600 clamp(1.2rem, 2.3vw, 1.75rem)/1.45 var(--font-body);
+}
+.chips-title {
+  margin: 0 0 0.6rem;
+  font-weight: 800;
+}
+.type-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.type-chips li {
+  padding: 0.4rem 1rem;
+  border: 2px solid var(--ink);
+  border-radius: var(--r-pill);
+  background: #ffe0dc;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-weight: 700;
+}
+
+/* ---------- Thẻ nội dung ---------- */
+.lesson-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lesson-card {
+  padding: 1.1rem 1.2rem;
+  border: var(--line);
+  border-radius: var(--r-tile);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.lesson-card p {
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+.lesson-card-icon {
+  display: grid;
+  place-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border: var(--line);
+  border-radius: 50%;
+  background: var(--opt-a);
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.lesson-card:nth-child(4n + 2) .lesson-card-icon {
+  background: var(--opt-b);
+}
+.lesson-card:nth-child(4n + 3) .lesson-card-icon {
+  background: var(--opt-c);
+}
+.lesson-card:nth-child(4n + 4) .lesson-card-icon {
+  background: var(--opt-d);
+}
+.lesson-card .lesson-card-title {
+  margin: 0.6rem 0 0.3rem;
+  font: 800 clamp(1.25rem, 2vw, 1.5rem)/1.2 var(--font-display);
+}
+
+/* ---------- Ba cột hậu quả ---------- */
+.impact-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.impact-col {
+  overflow: hidden;
+  border: var(--line);
+  border-radius: var(--r-tile);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.impact-col h3 {
+  margin: 0;
+  padding: 0.7rem 1.1rem;
+  border-bottom: var(--line);
+  font: 800 clamp(1.3rem, 2.2vw, 1.7rem)/1.2 var(--font-display);
+}
+.impact-col.tone-0 h3 {
+  background: var(--opt-a);
+}
+.impact-col.tone-1 h3 {
+  background: var(--opt-b);
+}
+.impact-col.tone-2 h3 {
+  background: var(--opt-c);
+}
+.impact-col ul {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.9rem 1.1rem 1.1rem 2.2rem;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+
+/* ---------- Các bước (là trình tự nên có số) ---------- */
+.step-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.step-list li {
+  padding: 1.2rem 1.25rem;
+  border: var(--line);
+  border-radius: var(--r-tile);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.step-list p {
+  margin: 0;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border: var(--line);
+  border-radius: 50%;
+  background: var(--green);
+  font: 800 1.6rem/1 var(--font-display);
+}
+.step-list .step-title {
+  margin: 0.6rem 0 0.3rem;
+  font: 800 clamp(1.3rem, 2.2vw, 1.7rem)/1.2 var(--font-display);
+}
+
+@media (max-width: 640px) {
+  .lesson-chapter {
+    display: none;
+  }
+  .lesson-nav .btn {
+    padding-inline: 1rem;
+  }
+}
+.lesson-bar .btn {
+  white-space: nowrap;
+}

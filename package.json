@@ -1,0 +1,25 @@
+{
+  "name": "phong-chong-ma-tuy-thcs-lan-phong",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Cổng thông tin phòng, chống ma túy học đường – Trường THCS Lân Phong (Vite + React + Gemini)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:single": "vite build && node scripts/build-single.mjs",
+    "preview": "vite preview",
+    "check:ai": "node --env-file=.env scripts/check-gemini.mjs"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=20.6"
+  }
+}

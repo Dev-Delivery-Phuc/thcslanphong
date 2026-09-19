@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--violet);
+  outline-offset: 3px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---------- Typography ---------- */
+.display-xl,
+.display-lg,
+.display-md,
+.display-sm {
+  margin: 0;
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+.display-xl {
+  font-size: clamp(2.5rem, 6.2vw, 4.4rem);
+  font-weight: 800;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.display-lg {
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+.display-md {
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.12;
+}
+.display-sm {
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media (min-width: 560px) {
+  .display-xl .line {
+    display: block;
+  }
+}
+.lead {
+  max-width: 56ch;
+  margin: 0.75rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+}
+.muted {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+kbd {
+  display: inline-block;
+  padding: 0 0.45em;
+  border: 2px solid var(--ink);
+  border-bottom-width: 4px;
+  border-radius: 6px;
+  background: var(--paper);
+  font: 700 0.9em var(--font-body);
+}
+
+/* ---------- Page shell ---------- */
+.page {
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 0.5rem var(--gutter) 3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Keyframes dùng chung ---------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.3) rotate(-20deg);
+  }
+}

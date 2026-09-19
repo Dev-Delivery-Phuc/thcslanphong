@@ -1,0 +1,102 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 0 3rem;
+}
+.hero-school {
+  margin: 0 0 1rem;
+  padding-left: 0.9rem;
+  border-left: 5px solid var(--green);
+  font-weight: 700;
+  line-height: 1.4;
+}
+.hero-actions {
+  margin-top: 1.75rem;
+}
+.hero-art {
+  position: relative;
+  justify-self: center;
+  padding: 1rem 2.5rem;
+}
+.sticker {
+  position: absolute;
+  padding: 0.3em 0.9em;
+  border: var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  font: 800 1.15rem/1.2 var(--font-display);
+  white-space: nowrap;
+}
+.sticker-a {
+  top: 8%;
+  left: -8%;
+  background: var(--coral);
+  transform: rotate(-8deg);
+}
+.sticker-b {
+  right: -4%;
+  bottom: 12%;
+  background: var(--sun);
+  transform: rotate(7deg);
+}
+@media (max-width: 819px) {
+  .hero-art .mascot {
+    width: 150px;
+    height: auto;
+  }
+}
+@media (min-width: 820px) {
+  .hero {
+    grid-template-columns: 1.3fr 1fr;
+    padding: 3rem 0 4rem;
+  }
+}
+
+.home-section {
+  margin-top: 2.5rem;
+}
+.home-section .muted {
+  margin-top: 0.35rem;
+}
+
+/* Mục lục bài giảng: là một trình tự nên dùng số thứ tự */
+.chapter-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.6rem 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: chapter;
+}
+.chapter-list li {
+  counter-increment: chapter;
+}
+.chapter-list a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.55rem 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+}
+.chapter-list a::before {
+  content: counter(chapter);
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font: 800 1rem/1 var(--font-display);
+}
+.chapter-list a:hover {
+  background: var(--sun);
+}

@@ -1,0 +1,8 @@
+/* Điểm vào CSS. Thứ tự: token → nền tảng → component → từng khu vực. */
+@import './tokens.css';
+@import './base.css';
+@import './components.css';
+@import './home.css';
+@import './lesson.css';
+@import './quiz.css';
+@import './teacher.css';
