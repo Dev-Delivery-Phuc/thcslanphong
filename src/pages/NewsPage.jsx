@@ -2,7 +2,6 @@ import { useState } from 'react';
 import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
 import HelpStrip from '@/components/HelpStrip.jsx';
-import Mascot from '@/components/Mascot.jsx';
 import { SITE, GOV_PORTALS, PRESS_ARTICLES, HOTLINE_PAGES } from '@/config/site.js';
 import { routes } from '@/lib/router.js';
 
@@ -39,7 +38,11 @@ export default function NewsPage() {
               </p>
             </div>
             <div className="hotline-mascot-box" style={{ background: '#eff6ff' }}>
-              <Mascot size={70} mood="think" />
+              <img
+                src="images/logo-thcs-lan-phong.jpg"
+                alt="Logo Trường THCS Lân Phong"
+                className="hotline-speech-logo"
+              />
               <div className="hotline-mascot-speech">
                 “Đọc báo chính thống
                 <br />

@@ -51,37 +51,69 @@
 .hero-actions {
   margin-top: 1.75rem;
 }
-.hero-art {
+.hero-photo-wrap {
   position: relative;
   justify-self: center;
-  padding: 1rem 2.5rem;
+  max-width: 440px;
+  width: 100%;
+  padding: 0.5rem;
+}
+.hero-photo-frame {
+  position: relative;
+  border: 2.5px solid var(--ink);
+  border-radius: var(--r-panel);
+  box-shadow: 6px 6px 0 var(--ink);
+  background: #fff;
+  overflow: hidden;
+  transform: rotate(1.5deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hero-photo-frame:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+.hero-photo-img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  display: block;
+}
+.hero-photo-badge {
+  position: absolute;
+  bottom: 0.85rem;
+  right: 0.85rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  border: 1.5px solid var(--ink);
+  border-radius: var(--r-pill);
+  padding: 0.3rem 0.75rem;
+  font: 800 0.82rem/1 var(--font-display);
+  color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
 }
 .sticker {
   position: absolute;
-  padding: 0.3em 0.9em;
+  padding: 0.35em 0.9em;
   border: var(--line);
   border-radius: 14px;
   box-shadow: var(--shadow);
   font: 800 1.15rem/1.2 var(--font-display);
   white-space: nowrap;
+  z-index: 2;
 }
 .sticker-a {
-  top: 8%;
-  left: -8%;
+  top: -6%;
+  left: -4%;
   background: var(--coral);
+  color: #fff;
   transform: rotate(-8deg);
 }
 .sticker-b {
-  right: -4%;
-  bottom: 12%;
+  right: -3%;
+  bottom: -6%;
   background: var(--sun);
-  transform: rotate(7deg);
-}
-@media (max-width: 819px) {
-  .hero-art .mascot {
-    width: 150px;
-    height: auto;
-  }
+  color: var(--ink);
+  transform: rotate(6deg);
 }
 @media (min-width: 820px) {
   .hero {

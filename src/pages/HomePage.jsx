@@ -1,7 +1,6 @@
 import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
 import HelpStrip from '@/components/HelpStrip.jsx';
-import Mascot from '@/components/Mascot.jsx';
 import SetGrid from '@/components/SetGrid.jsx';
 import { SITE, SCHOOL_HOTLINES, HOTLINES, HOTLINE_PAGES } from '@/config/site.js';
 import { LESSON_SLIDES } from '@/content/lesson.js';
@@ -44,10 +43,19 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="hero-art" aria-hidden="true">
-            <Mascot size={210} mood="happy" />
+          <div className="hero-photo-wrap" aria-hidden="true">
+            <div className="hero-photo-frame">
+              <img
+                src="images/hoc-sinh-lan-phong.jpg"
+                alt="Học sinh Trường THCS Lân Phong tích cực nói không với ma túy"
+                className="hero-photo-img"
+              />
+              <div className="hero-photo-badge">
+                <span>🏫 {SITE.schoolShort} Quyết Tâm</span>
+              </div>
+            </div>
             <span className="sticker sticker-a">Nói KHÔNG!</span>
-            <span className="sticker sticker-b">+200</span>
+            <span className="sticker sticker-b">Trường học an toàn</span>
           </div>
         </section>
 

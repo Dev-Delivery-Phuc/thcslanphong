@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import SiteHeader from '@/components/SiteHeader.jsx';
 import SiteFooter from '@/components/SiteFooter.jsx';
-import Mascot from '@/components/Mascot.jsx';
 import { SITE, SCHOOL_HOTLINES, HOTLINES, HOTLINE_PAGES } from '@/config/site.js';
 import { routes } from '@/lib/router.js';
 
@@ -33,7 +32,11 @@ export default function HotlinePage() {
               </p>
             </div>
             <div className="hotline-mascot-box">
-              <Mascot size={75} mood="happy" />
+              <img
+                src="images/logo-thcs-lan-phong.jpg"
+                alt="Logo Trường THCS Lân Phong"
+                className="hotline-speech-logo"
+              />
               <div className="hotline-mascot-speech">
                 “Đừng giữ một mình em nhé!
                 <br />

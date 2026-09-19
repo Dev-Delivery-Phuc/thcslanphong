@@ -1,4 +1,3 @@
-import Mascot from './Mascot.jsx';
 import { SITE, SCHOOL_HOTLINES, HOTLINES, HOTLINE_PAGES, SOURCES } from '@/config/site.js';
 import { routes } from '@/lib/router.js';
 
@@ -11,7 +10,6 @@ export default function SiteFooter() {
         <div className="footer-main-row">
           <div className="footer-brand">
             <img src="images/logo-thcs-lan-phong.jpg" alt="Logo Trường THCS Lân Phong" className="footer-logo-img" />
-            <Mascot size={46} mood="happy" />
             <div className="footer-brand-text">
               <h3>{SITE.school}</h3>
               <p>

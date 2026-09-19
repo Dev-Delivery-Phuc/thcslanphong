@@ -150,68 +150,205 @@
   filter: drop-shadow(3px 3px 0 var(--ink));
 }
 
-/* ---------- Site header ---------- */
-.site-header {
+/* ---------- Site Navbar: Thanh điều hướng chuyên nghiệp & chuẩn mực ---------- */
+.site-navbar-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 2.5px solid var(--ink);
+  box-shadow: 0 4px 14px rgba(27, 42, 74, 0.08);
+  transition: all 0.2s ease;
+}
+
+.site-navbar {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem 1.5rem;
   max-width: var(--page-max);
   margin: 0 auto;
-  padding: 1rem var(--gutter);
+  padding: 0.65rem var(--gutter);
+  position: relative;
 }
-.brand {
+
+.navbar-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.75rem;
   text-decoration: none;
 }
-.brand-logo-img {
-  width: 42px;
-  height: 42px;
+
+.navbar-logo {
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 2px solid var(--ink);
   object-fit: cover;
   box-shadow: 2px 2px 0 var(--ink);
   flex-shrink: 0;
   background: #fff;
+  transition: transform 0.15s ease;
 }
-.brand .mascot {
-  filter: none;
+
+.navbar-brand:hover .navbar-logo {
+  transform: rotate(6deg) scale(1.04);
 }
+
 .brand-text {
-  display: grid;
-  line-height: 1.15;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
+
 .brand-school {
-  font: 800 1.25rem/1.1 var(--font-display);
+  font: 800 1.22rem/1.1 var(--font-display);
+  color: var(--ink);
   white-space: nowrap;
 }
+
 .brand-sub {
   color: var(--ink-soft);
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-.site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-}
-.site-nav a {
-  padding: 0.4rem 0.9rem;
-  border: 2px solid transparent;
-  border-radius: var(--r-pill);
+  font-size: 0.8rem;
   font-weight: 700;
-  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
   white-space: nowrap;
 }
-.site-nav a:hover {
-  border-color: var(--ink);
+
+/* Nút toggle menu mobile */
+.navbar-toggle-btn {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: var(--r-pill);
+  box-shadow: 2px 2px 0 var(--ink);
+  cursor: pointer;
+  font: 700 0.95rem/1 var(--font-display);
+  color: var(--ink);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
 }
-.site-nav a[aria-current='page'] {
+
+.navbar-toggle-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.navbar-toggle-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--ink);
+}
+
+.toggle-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Navigation Links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0.95rem;
+  border: 2px solid transparent;
+  border-radius: var(--r-pill);
+  font: 700 0.95rem/1 var(--font-display);
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.12s ease;
+}
+
+.nav-item:hover {
+  border-color: var(--ink);
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.nav-item.active {
   border-color: var(--ink);
   background: var(--sun);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* Nút Hotline nổi bật trên Navbar */
+.nav-item-hotline {
+  background: #fee2e2;
+  border-color: #ef4444;
+  color: #b91c1c;
+}
+
+.nav-item-hotline:hover {
+  background: #fecaca;
+  border-color: var(--ink);
+  color: #991b1b;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.nav-item-hotline.active {
+  background: #ef4444;
+  color: #fff !important;
+  border-color: var(--ink);
+}
+
+/* Responsive cho màn hình nhỏ & điện thoại */
+@media (max-width: 960px) {
+  .brand-sub {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .navbar-toggle-btn {
+    display: inline-flex;
+  }
+
+  .navbar-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--paper);
+    border-bottom: 2.5px solid var(--ink);
+    padding: 1rem var(--gutter);
+    gap: 0.5rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar-nav.is-open {
+    display: flex;
+  }
+
+  .nav-item {
+    padding: 0.65rem 1rem;
+    justify-content: flex-start;
+    border-radius: 12px;
+  }
+}
+
+/* Logo tròn trong các bong bóng thoại */
+.hotline-speech-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  object-fit: cover;
+  box-shadow: 2px 2px 0 var(--ink);
+  flex-shrink: 0;
+  background: #fff;
 }
 
 /* ---------- Site footer: Gọn gàng, hiện đại, icon-based ---------- */
